@@ -44,7 +44,7 @@ export const Overview = () => {
           <br />
           Welcome to{" "}
           <code className="rounded-sm bg-muted-foreground/15 px-1.5 py-0.5">
-            We love you &lt;3
+            BurnedByHer &lt;3
           </code>
         </p>
       </div>

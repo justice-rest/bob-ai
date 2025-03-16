@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/custom/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bob.xyz"),
-  title: "Bob AI",
+  metadataBase: new URL("https://burnedbyher.xyz"),
+  title: "BurnedByHer <3",
   description: "Gamechanging roasting <3",
 };
 
