@@ -7,9 +7,9 @@ import { ThemeProvider } from "@/components/custom/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("/"),
-  title: "",
-  description: "Next.js chatbot template using the AI SDK and Gemini.",
+  metadataBase: new URL("https://bob.xyz"),
+  title: "Bob AI",
+  description: "Gamechanging roasting <3",
 };
 
 export default async function RootLayout({
