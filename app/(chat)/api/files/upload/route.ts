@@ -52,17 +52,22 @@ export async function POST(request: Request) {
 
     const filename = file.name;
     const fileBuffer = await file.arrayBuffer();
+    
+    // Generate a unique path with user ID and timestamp
+    const uniquePath = `uploads/${session.user.id}/${Date.now()}-${filename}`;
 
     try {
-      const data = await put(`${filename}`, fileBuffer, {
+      const data = await put(uniquePath, fileBuffer, {
         access: "public",
       });
 
       return NextResponse.json(data);
     } catch (error) {
+      console.error("Blob upload error:", error);
       return NextResponse.json({ error: "Upload failed" }, { status: 500 });
     }
   } catch (error) {
+    console.error("Request processing error:", error);
     return NextResponse.json(
       { error: "Failed to process request" },
       { status: 500 },
